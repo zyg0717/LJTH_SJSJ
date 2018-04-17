@@ -9,3 +9,14 @@ H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\o
 H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\obj\Release\Plugin.Auth.dll
 H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\obj\Release\Plugin.Auth.pdb
 H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\obj\Release\08.Auth.csproj.CopyComplete
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\bin\Release\Plugin.Auth.dll
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\bin\Release\Plugin.Auth.pdb
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\bin\Release\Framework.Web.dll
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\bin\Release\Framework.Core.dll
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\bin\Release\Framework.Web.pdb
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\bin\Release\Framework.Core.pdb
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\obj\Release\08.Auth.csprojResolveAssemblyReference.cache
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\obj\Release\08.Auth.csproj.CoreCompileInputs.cache
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\obj\Release\08.Auth.csproj.CopyComplete
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\obj\Release\Plugin.Auth.dll
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\obj\Release\Plugin.Auth.pdb

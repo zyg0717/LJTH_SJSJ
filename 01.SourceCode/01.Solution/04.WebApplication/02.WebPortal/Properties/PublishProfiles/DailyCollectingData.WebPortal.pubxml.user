@@ -432,7 +432,7 @@
       <publishTime>02/11/2018 15:41:03</publishTime>
     </File>
     <File Include="Assets/scripts/common/base.utils.js">
-      <publishTime>04/14/2018 15:19:50</publishTime>
+      <publishTime>04/17/2018 14:53:29</publishTime>
     </File>
     <File Include="Assets/scripts/common/components/vue.bootstrap-select.js">
       <publishTime>02/11/2018 15:41:03</publishTime>
@@ -501,7 +501,7 @@
       <publishTime>04/14/2018 15:19:56</publishTime>
     </File>
     <File Include="Assets/scripts/Task/TaskCollection.js">
-      <publishTime>03/17/2018 13:11:37</publishTime>
+      <publishTime>04/17/2018 13:51:23</publishTime>
     </File>
     <File Include="Assets/scripts/Task/TaskCollectionMobile.js">
       <publishTime>04/13/2018 15:13:57</publishTime>
@@ -831,10 +831,10 @@
       <publishTime>03/17/2018 13:11:37</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>04/14/2018 16:25:18</publishTime>
+      <publishTime>04/17/2018 15:01:43</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>04/14/2018 16:25:18</publishTime>
+      <publishTime>04/17/2018 15:01:43</publishTime>
     </File>
     <File Include="bin/Aspose.Cells.dll">
       <publishTime>02/11/2018 15:40:30</publishTime>
@@ -852,55 +852,55 @@
       <publishTime>03/17/2018 13:11:36</publishTime>
     </File>
     <File Include="bin/Framework.Core.dll">
-      <publishTime>04/14/2018 16:18:42</publishTime>
+      <publishTime>04/17/2018 15:01:20</publishTime>
     </File>
     <File Include="bin/Framework.Core.pdb">
-      <publishTime>04/14/2018 16:18:42</publishTime>
+      <publishTime>04/17/2018 15:01:20</publishTime>
     </File>
     <File Include="bin/Framework.Data.dll">
-      <publishTime>04/14/2018 16:18:45</publishTime>
+      <publishTime>04/17/2018 15:01:20</publishTime>
     </File>
     <File Include="bin/Framework.Data.pdb">
-      <publishTime>04/14/2018 16:18:45</publishTime>
+      <publishTime>04/17/2018 15:01:20</publishTime>
     </File>
     <File Include="bin/Framework.Web.dll">
-      <publishTime>04/14/2018 16:18:45</publishTime>
+      <publishTime>04/17/2018 15:01:21</publishTime>
     </File>
     <File Include="bin/Framework.Web.pdb">
-      <publishTime>04/14/2018 16:18:45</publishTime>
+      <publishTime>04/17/2018 15:01:21</publishTime>
     </File>
     <File Include="bin/Lib.BLL.dll">
-      <publishTime>04/14/2018 16:18:48</publishTime>
+      <publishTime>04/17/2018 15:01:24</publishTime>
     </File>
     <File Include="bin/Lib.BLL.dll.config">
       <publishTime>03/17/2018 13:11:35</publishTime>
     </File>
     <File Include="bin/Lib.BLL.pdb">
-      <publishTime>04/14/2018 16:18:48</publishTime>
+      <publishTime>04/17/2018 15:01:24</publishTime>
     </File>
     <File Include="bin/Lib.Common.dll">
-      <publishTime>04/14/2018 16:18:46</publishTime>
+      <publishTime>04/17/2018 15:01:22</publishTime>
     </File>
     <File Include="bin/Lib.Common.pdb">
-      <publishTime>04/14/2018 16:18:46</publishTime>
+      <publishTime>04/17/2018 15:01:22</publishTime>
     </File>
     <File Include="bin/Lib.DAL.dll">
-      <publishTime>04/14/2018 16:18:47</publishTime>
+      <publishTime>04/17/2018 15:01:23</publishTime>
     </File>
     <File Include="bin/Lib.DAL.pdb">
-      <publishTime>04/14/2018 16:18:47</publishTime>
+      <publishTime>04/17/2018 15:01:23</publishTime>
     </File>
     <File Include="bin/Lib.Model.dll">
-      <publishTime>04/14/2018 16:18:45</publishTime>
+      <publishTime>04/17/2018 15:01:21</publishTime>
     </File>
     <File Include="bin/Lib.Model.pdb">
-      <publishTime>04/14/2018 16:18:45</publishTime>
+      <publishTime>04/17/2018 15:01:21</publishTime>
     </File>
     <File Include="bin/Lib.ViewModel.dll">
-      <publishTime>04/14/2018 16:18:46</publishTime>
+      <publishTime>04/17/2018 15:01:21</publishTime>
     </File>
     <File Include="bin/Lib.ViewModel.pdb">
-      <publishTime>04/14/2018 16:18:46</publishTime>
+      <publishTime>04/17/2018 15:01:21</publishTime>
     </File>
     <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll">
       <publishTime>02/11/2018 15:40:29</publishTime>
@@ -924,10 +924,10 @@
       <publishTime>08/08/2017 19:19:52</publishTime>
     </File>
     <File Include="bin/Plugin.Auth.dll">
-      <publishTime>04/14/2018 16:18:46</publishTime>
+      <publishTime>04/17/2018 15:01:21</publishTime>
     </File>
     <File Include="bin/Plugin.Auth.pdb">
-      <publishTime>04/14/2018 16:18:46</publishTime>
+      <publishTime>04/17/2018 15:01:21</publishTime>
     </File>
     <File Include="bin/Plugin.OAMessage.dll">
       <publishTime>02/11/2018 16:05:38</publishTime>
@@ -939,25 +939,25 @@
       <publishTime>02/11/2018 16:05:39</publishTime>
     </File>
     <File Include="bin/Plugin.SSO.dll">
-      <publishTime>04/14/2018 16:18:42</publishTime>
+      <publishTime>04/17/2018 15:01:20</publishTime>
     </File>
     <File Include="bin/Plugin.SSO.pdb">
-      <publishTime>04/14/2018 16:18:42</publishTime>
+      <publishTime>04/17/2018 15:01:20</publishTime>
     </File>
     <File Include="bin/Plugin.SSO.XmlSerializers.dll">
-      <publishTime>04/14/2018 16:18:43</publishTime>
+      <publishTime>04/17/2018 15:01:21</publishTime>
     </File>
     <File Include="bin/Plugin.Storage.dll">
-      <publishTime>04/14/2018 16:18:42</publishTime>
+      <publishTime>04/17/2018 15:01:20</publishTime>
     </File>
     <File Include="bin/Plugin.Storage.pdb">
-      <publishTime>04/14/2018 16:18:42</publishTime>
+      <publishTime>04/17/2018 15:01:20</publishTime>
     </File>
     <File Include="bin/Plugin.UserSelect.dll">
-      <publishTime>04/14/2018 16:25:10</publishTime>
+      <publishTime>04/17/2018 15:01:36</publishTime>
     </File>
     <File Include="bin/Plugin.UserSelect.pdb">
-      <publishTime>04/14/2018 16:25:10</publishTime>
+      <publishTime>04/17/2018 15:01:36</publishTime>
     </File>
     <File Include="bin/Plugin.Workflow.dll">
       <publishTime>02/11/2018 16:05:39</publishTime>
@@ -966,10 +966,10 @@
       <publishTime>02/11/2018 16:05:39</publishTime>
     </File>
     <File Include="bin/WebApplication.WebPortal.dll">
-      <publishTime>04/14/2018 16:25:11</publishTime>
+      <publishTime>04/17/2018 15:01:37</publishTime>
     </File>
     <File Include="bin/WebApplication.WebPortal.pdb">
-      <publishTime>04/14/2018 16:25:11</publishTime>
+      <publishTime>04/17/2018 15:01:37</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>02/11/2018 15:40:55</publishTime>
@@ -978,7 +978,7 @@
       <publishTime>02/11/2018 15:40:55</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>04/14/2018 16:25:16</publishTime>
+      <publishTime>04/17/2018 15:01:41</publishTime>
     </File>
     <File Include="Public/404.html">
       <publishTime>04/14/2018 15:31:55</publishTime>
@@ -1035,7 +1035,7 @@
       <publishTime>04/13/2018 15:13:57</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/14/2018 16:25:12</publishTime>
+      <publishTime>04/17/2018 15:01:39</publishTime>
     </File>
   </ItemGroup>
 </Project>

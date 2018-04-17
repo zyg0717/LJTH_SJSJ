@@ -146,7 +146,7 @@ var utils = {
             },
             error: function (XMLHttpRequest, textStatus) {
                 utils.unblock();
-                utils.alertMessage('error:' + XMLHttpRequest.responseText, function () {
+                utils.alertMessage('提示:' + XMLHttpRequest.responseText, function () {
                     if (XMLHttpRequest.status === 403) {
                         //window.location.href = 'wd_sso_logout?action=exit&url=' + encodeURIComponent(window.location.href);
                         window.location.href = '/Public/Login.aspx?returnUrl=' + encodeURIComponent(window.location.href);

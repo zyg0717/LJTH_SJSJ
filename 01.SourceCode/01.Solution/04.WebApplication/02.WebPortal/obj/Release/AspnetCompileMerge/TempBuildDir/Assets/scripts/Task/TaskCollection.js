@@ -143,13 +143,15 @@ var Task = {
         }
     },
     CheckValue: function () {
+        var result = true;
         var isPending = $(".tc-upload.result-3").hasClass("hidden")
         if (isPending) {
+            result = false;
             utils.alertMessage("请先上传填报文件", function () {
                 return false;
             });
         }
-        return true;
+        return result;
     },
     LoadData: function (businessId, callback) {
         var url = api_url + 'api/todos/load/' + businessId;
