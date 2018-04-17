@@ -10,6 +10,7 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+*.txt
 
 # Build results
 [Dd]ebug/
@@ -99,11 +100,13 @@ $tf/
 
 # Guidance Automation Toolkit
 *.gpState
+*.txt
 
 # ReSharper is a .NET coding add-in
 _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
+*.txt
 
 # JustCode is a .NET coding add-in
 .JustCode
@@ -113,6 +116,7 @@ _TeamCity*
 
 # DotCover is a Code Coverage Tool
 *.dotCover
+*.txt
 
 # NCrunch
 _NCrunch_*
@@ -145,6 +149,7 @@ publish/
 # Publish Web Output
 *.[Pp]ublish.xml
 *.azurePubxml
+*.txt
 # TODO: Comment the next line if you want to checkin your web deploy settings
 # but database connection strings (with potential passwords) will be unencrypted
 #*.pubxml
@@ -166,10 +171,12 @@ PublishScripts/
 # NuGet v3's project.json files produces more ignoreable files
 *.nuget.props
 *.nuget.targets
+*.txt
 
 # Microsoft Azure Build Output
 csx/
 *.build.csdef
+*.txt
 
 # Microsoft Azure Emulator
 ecf/
@@ -196,6 +203,7 @@ ClientBin/
 *.jfm
 *.pfx
 *.publishsettings
+*.txt
 node_modules/
 orleans.codegen.cs
 
@@ -217,11 +225,13 @@ UpgradeLog*.htm
 # SQL Server files
 *.mdf
 *.ldf
+*.txt
 
 # Business Intelligence projects
 *.rdl.data
 *.bim.layout
 *.bim_*.settings
+*.txt
 
 # Microsoft Fakes
 FakesAssemblies/
