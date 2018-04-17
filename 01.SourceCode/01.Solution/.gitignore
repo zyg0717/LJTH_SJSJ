@@ -23,6 +23,8 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+*.txt
+*.log
 
 
 # Visual Studio 2015 cache/options directory
@@ -72,6 +74,12 @@ artifacts/
 *.pidb
 *.svclog
 *.scc
+*.txt
+*.log
+*.ide
+*.suo
+*.ide-shm
+*.ide-wal
 
 # Chutzpah Test files
 _Chutzpah*
@@ -86,12 +94,24 @@ ipch/
 *.cachefile
 *.VC.db
 *.VC.VC.opendb
+*.txt
+*.log
+*.ide
+*.suo
+*.ide-shm
+*.ide-wal
 
 # Visual Studio profiler
 *.psess
 *.vsp
 *.vspx
 *.sap
+*.txt
+*.log
+*.ide
+*.suo
+*.ide-shm
+*.ide-wal
 
 # TFS 2012 Local Workspace
 $tf/
