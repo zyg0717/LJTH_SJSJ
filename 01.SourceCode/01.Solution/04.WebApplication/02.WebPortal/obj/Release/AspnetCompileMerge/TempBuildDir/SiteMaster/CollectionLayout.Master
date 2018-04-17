@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CollectionLayout.master.cs" Inherits="WebApplication.WebPortal.SiteMaster.CollectionLayout" %>
+
+<%@ Register Src="~/SiteMaster/bsCtrl.ascx" TagPrefix="uc1" TagName="bsCtrl" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>数据收集系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <uc1:bsCtrl runat="server" ID="bsCtrl" />
+    <link href="<%=ResolveUrl("~/Assets/vendors/bootstrap/css/bootstrap.min.css") %>" rel="stylesheet" />
+    <!--Main Page Styles-->
+    <link href="<%=ResolveUrl("~/Assets/styles/site.css") %>" rel="stylesheet" />
+    <!--Basic JavaScripts-->
+    <script src="<%=ResolveUrl("~/Assets/vendors/jquery/jquery.min.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Assets/vendors/jquery-blockui/js/jquery.blockUI.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Assets/scripts/common/base.utils.js") %>"></script>
+    <asp:ContentPlaceHolder ID="styles" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <div id="header-top">
+                    
+                        <h1 class="header-top-title">
+                            <img src="<%=ResolveUrl("~/Assets/images/logo.png") %>" alt="数据收集系统" title="" />
+                            <span>数据收集系统</span>
+                        </h1>
+                    
+                </div>
+                <section id="content">
+                    <div class="container">
+                        <div class="row">
+                            <asp:ContentPlaceHolder ID="contents" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </section>
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:ContentPlaceHolder ID="scripts" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

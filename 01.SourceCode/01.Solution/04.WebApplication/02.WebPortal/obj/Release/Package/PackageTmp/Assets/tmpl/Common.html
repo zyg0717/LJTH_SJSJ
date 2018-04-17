@@ -1,0 +1,40 @@
+﻿
+<html>
+<head>
+</head>
+<body>
+
+    <script src="/Assets/vendors/workflow/js/wanda-wf-client.js" />
+    <link href="/Assets/vendors/workflow/css/wanda-wf-client.css" rel="stylesheet" />
+    <script type="text/template" id="DownCollectDataTask_tmpl">
+
+        <table style="width: 500px; height: 150px; font-size: 12px; vertical-align: top;">
+            <tbody>
+                <tr style="height: 50px; line-height: 30px;display:none">
+                    <td class="firsttd" style="text-align: right; font-size: 12px;">任务进度：</td>
+                    <td style="text-align: left;">本次共有${Total}人填报，${Finish}人已完成填报</td>
+                </tr>
+                <tr style="height: 50px; line-height: 30px;">
+                    <td class="firsttd" style="text-align: right; font-size: 12px;">追加信息：</td>
+                    <td style="text-align: left;">
+                        <input type="checkbox" style="display:none" name="chk_company" id="chk_company" /><label for="chk_company" style="margin-right: 8px;display:none">公司</label>
+                        <input type="checkbox" name="chk_org" id="chk_org" /><label for="chk_org" style="margin-right: 8px;">组织架构</label>
+                        <input type="checkbox" name="chk_name" id="chk_name" /><label for="chk_name" style="margin-right: 8px;">姓名</label>
+                        <input type="checkbox" name="chk_account" id="chk_account" /><label for="chk_account">账号</label>
+                    </td>
+                </tr>
+                <tr style="height: 50px; line-height: 30px;">
+                    <td class="firsttd" style="text-align: center; font-size: 12px;" colspan="2">
+                        <button  id="btn_download" class="btn btn-orange " style="font-size: 14px; border-radius: 4px;">下载汇总文件</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </script>
+</body>
+
+</html>

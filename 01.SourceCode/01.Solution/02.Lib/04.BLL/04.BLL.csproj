@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{808F0112-4668-436D-8E61-C2F438045A16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lib.BLL</RootNamespace>
+    <AssemblyName>Lib.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\..\01.Framework\00.MSEntLib\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection">
+      <HintPath>..\..\01.Framework\00.MSEntLib\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttachmentOperator.cs" />
+    <Compile Include="Authorization\EmployeeOperator.cs" />
+    <Compile Include="AutoProcessOperator.cs" />
+    <Compile Include="Builder\ExcelTempleteBuilder.cs" />
+    <Compile Include="Builder\TaskCollectionDataBuilder.cs" />
+    <Compile Include="CollectUserTaskOperator.cs" />
+    <Compile Include="DataCollectUserOperator.cs" />
+    <Compile Include="EnumOperator.cs" />
+    <Compile Include="OnlineTaskFileRelationOperator.cs" />
+    <Compile Include="PreviewRelationOperator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaskUserViewOperator.cs" />
+    <Compile Include="TemplateConfigInstanceOperator.cs" />
+    <Compile Include="TemplateConfigInstancePlanOperator.cs" />
+    <Compile Include="TemplateConfigOperator.cs" />
+    <Compile Include="TemplateConfigSelectOperator.cs" />
+    <Compile Include="TemplateOperator.cs" />
+    <Compile Include="TemplateSheetOperator.cs" />
+    <Compile Include="TemplateTaskOperator.cs" />
+    <Compile Include="TempOrgOperator.cs" />
+    <Compile Include="TSM_MessagesOperator.cs" />
+    <Compile Include="UserInfoOperator.cs" />
+    <Compile Include="VCollectUserOperator.cs" />
+    <Compile Include="VCollectUserTaskOperator.cs" />
+    <Compile Include="VTaskTodoOperator.cs" />
+    <Compile Include="VTaskUserOperator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\01.Framework\01.Core\01.Core.csproj">
+      <Project>{1b0b51d4-afd5-46a7-a74f-70aea0c55519}</Project>
+      <Name>01.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\01.Framework\02.Data\02.Data.csproj">
+      <Project>{341b35e4-f599-4853-a446-51010c3cb650}</Project>
+      <Name>02.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\01.Framework\03.Web\03.Web.csproj">
+      <Project>{1f9d30b3-8221-4528-a14e-ca3c65313677}</Project>
+      <Name>03.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\06.Plugin\07.Workflow\07.Workflow.csproj">
+      <Project>{9FA9C0D3-4EE8-4814-ADB2-EB4D532B6F6E}</Project>
+      <Name>07.Workflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\06.Plugin\08.Auth\08.Auth.csproj">
+      <Project>{6DAB914C-A21F-4E1E-B2C3-3A0654ED8887}</Project>
+      <Name>08.Auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\00.Common\00.Common.csproj">
+      <Project>{d4ee0059-4059-452d-af8c-8bca617544f0}</Project>
+      <Name>00.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\01.Model\01.Model.csproj">
+      <Project>{9a6d2e8c-620b-49fd-8470-ec40b70deba4}</Project>
+      <Name>01.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\02.ViewModel\02.ViewModel.csproj">
+      <Project>{bae0b3b7-aae1-4a76-9e84-e5721c0d2610}</Project>
+      <Name>02.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\03.DAL\03.DAL.csproj">
+      <Project>{0fab0d10-543a-42bd-9274-679bb692c617}</Project>
+      <Name>03.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,13 @@
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\02.Lib\02.ViewModel\bin\Debug\Lib.ViewModel.dll
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\02.Lib\02.ViewModel\bin\Debug\Lib.ViewModel.pdb
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\02.Lib\02.ViewModel\bin\Debug\Framework.Core.dll
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\02.Lib\02.ViewModel\bin\Debug\Framework.Data.dll
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\02.Lib\02.ViewModel\bin\Debug\Lib.Model.dll
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\02.Lib\02.ViewModel\bin\Debug\Framework.Core.pdb
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\02.Lib\02.ViewModel\bin\Debug\Framework.Data.pdb
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\02.Lib\02.ViewModel\bin\Debug\Lib.Model.pdb
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\02.Lib\02.ViewModel\obj\Debug\02.ViewModel.csprojResolveAssemblyReference.cache
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\02.Lib\02.ViewModel\obj\Debug\02.ViewModel.csproj.CoreCompileInputs.cache
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\02.Lib\02.ViewModel\obj\Debug\02.ViewModel.csproj.CopyComplete
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\02.Lib\02.ViewModel\obj\Debug\Lib.ViewModel.dll
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\02.Lib\02.ViewModel\obj\Debug\Lib.ViewModel.pdb

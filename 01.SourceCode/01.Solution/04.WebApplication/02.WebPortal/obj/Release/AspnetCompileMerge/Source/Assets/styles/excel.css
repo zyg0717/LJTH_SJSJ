@@ -1,0 +1,259 @@
+﻿.btn {
+   font-family: 'Microsoft YaHei' !important;
+}
+.sheetname {
+    width: 150px;
+    white-space: nowrap;
+    word-break: keep-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.mobantips {
+    margin-top: 40px;
+    width: 240px;
+    float: right;
+}
+
+.mobantips li {
+    list-style: disc;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.table-bordered {
+    border: 1px solid #dddddd;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+    border: 1px solid #dddddd;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+    border-bottom-width: 2px;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+   background-color: #f9f9f9;
+}
+
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+   background-color: #f5f5f5;
+}
+
+.table1 thead > tr > th,
+.table1 tbody > tr > th,
+.table1 tfoot > tr > th,
+.table1 thead > tr > td,
+.table1 tbody > tr > td,
+.table1 tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.428571429;
+    vertical-align: top;
+    border-top: 1px solid #dddddd;
+}
+
+.table1 thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dddddd;
+}
+
+
+.file-button {
+   position: relative;
+   overflow: hidden;
+   display: inline-block;
+   width: 139px;
+   height: 29px;
+   line-height: 29px;
+   background-position: initial;
+   font-size: 14px;
+   font-weight: normal;
+   font-family: 'Microsoft YaHei';
+   border-radius: 4px;
+   padding: 0px;
+   background: url('../../Images/Batch_import.png') no-repeat;
+   background-position: center top;
+   background-repeat: no-repeat;
+   color: #fff;
+   text-indent: 16px;
+   text-align: center;
+   cursor: pointer;
+   vertical-align: middle;
+   margin-left: 10px;
+}
+
+.file-button input[type=file] {
+   position: absolute;
+   top: 0;
+   right: 0;
+   margin: 0;
+   opacity: 0;
+   -ms-filter: 'alpha(opacity=0)';
+   font-size: 200px !important;
+   direction: ltr;
+   cursor: pointer;
+}
+
+.file-button span {
+   margin-top: 3px;
+   height: 29px;
+   line-height: 29px;
+   font-size: 14px;
+}
+
+.portlet-content li {
+   height: 30px;
+   vertical-align: top;
+   line-height: 30px;
+   cursor: pointer;
+}
+
+.mobanbox li:nth-child(3) {
+   min-width: 120px;
+   width: auto;
+}
+
+.excel-config tr td input[type=radio] {
+   border: none;
+}
+
+.excel-config tr td input[type=checkbox] {
+   background: #eee;
+   border: 1px solid #999;
+}
+.excel-config tr td input[type=checkbox]:checked {
+    background: #000;
+}
+
+#div_container input[type=text] {
+   color: #000;
+   width: 100%;
+   min-width: 90px;
+}
+
+input:-ms-input-placeholder {
+   color: #999 !important;
+}
+
+
+
+.file-button-n:hover,
+.file-button-n:focus {    
+    background-color: #47a447;
+    border-color: #398439;
+    color: #fff !important;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.file-button-n span {
+    line-height: 24px !important;
+    cursor: pointer;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    height: 24px !important;
+    width: 66px !important;
+}
+
+.file-button-n input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px;
+    direction: ltr;
+    cursor: pointer;
+}
+
+.file-button-n {
+     font-size: 16px !important;
+     border-radius: 6px;
+     padding: 5px 30px;
+     margin-left: 17px;
+     margin-top: 20px;
+     position: relative;
+     overflow: hidden;
+     display: inline-block;
+     margin-bottom: 0;
+     font-size: 18px;
+     font-weight: normal;
+     line-height: 1.428571429;
+     text-align: center;
+     white-space: nowrap;
+     vertical-align: middle;
+     cursor: pointer;
+     border: 1px solid transparent;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     -o-user-select: none;
+     user-select: none;
+     color: #ffffff !important;    
+     background-color: #5cb85c;
+     border-color: #4cae4c;
+     margin-right: 10px;
+     float: left;
+     height: 24px;
+     width: 66px;
+}
+
+.btn-success {
+     color: #ffffff;
+     background-color: #5cb85c;
+     border-color: #4cae4c;
+}
+
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
+    color: #ffffff !important;
+    background-color: #47a447;
+}
+
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
+    background-image: none;
+}
+
+.btn-success.disabled,
+.btn-success[disabled],
+fieldset[disabled] .btn-success,
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled:active,
+.btn-success[disabled]:active,
+fieldset[disabled] .btn-success:active,
+.btn-success.disabled.active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success.active {
+   background-color: #5cb85c;
+   border-color: #4cae4c;
+   color: #fff;
+}
+
+.template-dialog .table th,
+.template-dialog .table td {
+    padding: 8px;
+}

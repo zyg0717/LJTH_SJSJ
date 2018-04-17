@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title></title>
+    <script src="../Assets/scripts/vue.min.js"></script>
+    <link href="../Assets/vendors/userselect/css/common.userselect.ctrl.mobile.css" rel="stylesheet" />
+    <script src="../Assets/vendors/userselect/js/common.userselect.ctrl.mobile.js"></script>
+</head>
+<body>
+   
+    <input type="button" value="测试" onclick="open_user_select()" />
+    <div id="wanda_userselect">
+
+    </div>
+    <script type="text/javascript">
+        function open_user_select() {
+            user_select_ctrl.show(function (data) {
+                alert(data.length);
+            });
+        }
+    </script>
+</body>
+</html>

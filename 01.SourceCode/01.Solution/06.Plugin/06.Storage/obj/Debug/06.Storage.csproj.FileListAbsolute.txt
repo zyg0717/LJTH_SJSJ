@@ -1,0 +1,6 @@
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\06.Storage\bin\Debug\Plugin.Storage.dll
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\06.Storage\bin\Debug\Plugin.Storage.pdb
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\06.Storage\obj\Debug\06.Storage.csprojResolveAssemblyReference.cache
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\06.Storage\obj\Debug\06.Storage.csproj.CoreCompileInputs.cache
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\06.Storage\obj\Debug\Plugin.Storage.dll
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\06.Storage\obj\Debug\Plugin.Storage.pdb

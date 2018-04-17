@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CollectionLayoutMobile.Master.cs" Inherits="WebApplication.WebPortal.SiteMaster.CollectionLayoutMobile" %>
+
+<%@ Register Src="~/SiteMaster/bsCtrl.ascx" TagPrefix="uc1" TagName="bsCtrl" %>
+<%@ Register Src="~/SiteMaster/wfCtrl.ascx" TagPrefix="uc1" TagName="wfCtrl" %>
+<%@ Register Src="~/SiteMaster/userSelectCtrl.ascx" TagPrefix="uc1" TagName="userSelectCtrl" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>数据收集系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <uc1:bsCtrl runat="server" ID="bsCtrl" />
+    <link href="<%=ResolveUrl("~/Assets/vendors/bootstrap/css/bootstrap.min.css") %>" rel="stylesheet" />
+    <!--Main Page Styles-->
+    <link href="<%=ResolveUrl("~/Assets/styles/content.css") %>" rel="stylesheet" />
+    <!--Basic JavaScripts-->
+   <%-- <%if (SSO.SSOModules.IsInApp)
+        {
+    %>
+    <script type="text/javascript" src="http://10.199.202.43/jsdk2/jssdk/js/cordova.js"></script>
+    <%
+        } %>--%>
+
+    <script src="<%=ResolveUrl("~/Assets/scripts/vue.min.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Assets/scripts/vue-resource.min.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Assets/vendors/jquery/jquery.min.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Assets/vendors/jquery-blockui/js/jquery.blockUI.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Assets/scripts/common/base.utils.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Assets/scripts/common/vue.utils.js") %>"></script>
+    <uc1:userSelectCtrl runat="server" ID="userSelectCtrl" />
+    <uc1:wfCtrl runat="server" ID="wfCtrl" />
+    <asp:ContentPlaceHolder ID="styles" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </section>
+        <asp:ContentPlaceHolder ID="scripts" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

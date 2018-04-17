@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{82AF82B9-BE2F-4B16-9CC7-D20F8B567659}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication.WebPortal</RootNamespace>
+    <AssemblyName>WebApplication.WebPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BPF.SDK.Common">
+      <HintPath>..\..\01.Framework\00.MSEntLib\BPF.SDK.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BPF.UserSelect.Client">
+      <HintPath>..\..\01.Framework\00.MSEntLib\BPF.UserSelect.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="BPF.Workflow.Client, Version=1.0.6606.39721, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\01.Framework\00.MSEntLib\BPF.Workflow.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="BPF.Workflow.Object, Version=1.0.6606.39713, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\01.Framework\00.MSEntLib\BPF.Workflow.Object.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\Admin\AdminTaskList.aspx.cs">
+      <DependentUpon>AdminTaskList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Admin\AdminTaskList.aspx.designer.cs">
+      <DependentUpon>AdminTaskList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Admin\AdminTemplateList.aspx.cs">
+      <DependentUpon>AdminTemplateList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Admin\AdminTemplateList.aspx.designer.cs">
+      <DependentUpon>AdminTemplateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Models\Control\ucExcel.ascx.cs">
+      <DependentUpon>ucExcel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Models\Control\ucExcel.ascx.designer.cs">
+      <DependentUpon>ucExcel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Models\TemplateList.aspx.cs">
+      <DependentUpon>TemplateList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Models\TemplateList.aspx.designer.cs">
+      <DependentUpon>TemplateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Models\TemplateModel.aspx.cs">
+      <DependentUpon>TemplateModel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Models\TemplateModel.aspx.designer.cs">
+      <DependentUpon>TemplateModel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Navigation\QuickStart.aspx.cs">
+      <DependentUpon>QuickStart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Navigation\QuickStart.aspx.designer.cs">
+      <DependentUpon>QuickStart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\OWA\Preview.aspx.cs">
+      <DependentUpon>Preview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\OWA\Preview.aspx.designer.cs">
+      <DependentUpon>Preview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Process\DoneList.aspx.cs">
+      <DependentUpon>DoneList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Process\DoneList.aspx.designer.cs">
+      <DependentUpon>DoneList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Process\TodoList.aspx.cs">
+      <DependentUpon>TodoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Process\TodoList.aspx.designer.cs">
+      <DependentUpon>TodoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Task\TaskAdd.aspx.cs">
+      <DependentUpon>TaskAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Task\TaskAdd.aspx.designer.cs">
+      <DependentUpon>TaskAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Task\TaskCollection.aspx.cs">
+      <DependentUpon>TaskCollection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Task\TaskCollection.aspx.designer.cs">
+      <DependentUpon>TaskCollection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Task\TaskCollectionMobile.aspx.cs">
+      <DependentUpon>TaskCollectionMobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Task\TaskCollectionMobile.aspx.designer.cs">
+      <DependentUpon>TaskCollectionMobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Task\TaskCollectionMobileNew.aspx.cs">
+      <DependentUpon>TaskCollectionMobileNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Task\TaskCollectionMobileNew.aspx.designer.cs">
+      <DependentUpon>TaskCollectionMobileNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Task\TaskCollectionView.aspx.cs">
+      <DependentUpon>TaskCollectionView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Task\TaskCollectionView.aspx.designer.cs">
+      <DependentUpon>TaskCollectionView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Task\TaskCollectionViewMobile.aspx.cs">
+      <DependentUpon>TaskCollectionViewMobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Task\TaskCollectionViewMobile.aspx.designer.cs">
+      <DependentUpon>TaskCollectionViewMobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Task\TaskInfo.aspx.cs">
+      <DependentUpon>TaskInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Task\TaskInfo.aspx.designer.cs">
+      <DependentUpon>TaskInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Task\TaskList.aspx.cs">
+      <DependentUpon>TaskList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\Task\TaskList.aspx.designer.cs">
+      <DependentUpon>TaskList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public\Bridge.aspx.cs">
+      <DependentUpon>Bridge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Bridge.aspx.designer.cs">
+      <DependentUpon>Bridge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\MobileAppBridge.aspx.cs">
+      <DependentUpon>MobileAppBridge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\MobileAppBridge.aspx.designer.cs">
+      <DependentUpon>MobileAppBridge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\OABridge.aspx.cs">
+      <DependentUpon>OABridge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\OABridge.aspx.designer.cs">
+      <DependentUpon>OABridge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMaster\bsCtrl.ascx.cs">
+      <DependentUpon>bsCtrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster\bsCtrl.ascx.designer.cs">
+      <DependentUpon>bsCtrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMaster\CollectionLayout.Master.cs">
+      <DependentUpon>CollectionLayout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster\CollectionLayout.Master.designer.cs">
+      <DependentUpon>CollectionLayout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMaster\CollectionLayoutMobile.Master.cs">
+      <DependentUpon>CollectionLayoutMobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster\CollectionLayoutMobile.Master.designer.cs">
+      <DependentUpon>CollectionLayoutMobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMaster\Empty.Master.cs">
+      <DependentUpon>Empty.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster\Empty.Master.designer.cs">
+      <DependentUpon>Empty.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMaster\fmCtrl.ascx.cs">
+      <DependentUpon>fmCtrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster\fmCtrl.ascx.designer.cs">
+      <DependentUpon>fmCtrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMaster\Layout.Master.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster\Layout.Master.designer.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMaster\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster\PageLayout.master.cs">
+      <DependentUpon>PageLayout.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster\PageLayout.master.designer.cs">
+      <DependentUpon>PageLayout.master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMaster\userSelectCtrl.ascx.cs">
+      <DependentUpon>userSelectCtrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster\userSelectCtrl.ascx.designer.cs">
+      <DependentUpon>userSelectCtrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMaster\wfCtrl.ascx.cs">
+      <DependentUpon>wfCtrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster\wfCtrl.ascx.designer.cs">
+      <DependentUpon>wfCtrl.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Application\Admin\AdminTaskList.aspx" />
+    <Content Include="Application\Admin\AdminTemplateList.aspx" />
+    <Content Include="Application\Models\Control\ucExcel.ascx" />
+    <Content Include="Application\Models\TemplateList.aspx" />
+    <Content Include="Application\Models\TemplateModel.aspx" />
+    <Content Include="Application\Navigation\QuickStart.aspx" />
+    <Content Include="Application\OWA\Preview.aspx" />
+    <Content Include="Application\Process\DoneList.aspx" />
+    <Content Include="Application\Process\TodoList.aspx" />
+    <Content Include="Application\Task\TaskAdd.aspx" />
+    <Content Include="Application\Task\TaskCollection.aspx" />
+    <Content Include="Application\Task\TaskCollectionMobile.aspx" />
+    <Content Include="Application\Task\TaskCollectionMobileNew.aspx" />
+    <Content Include="Application\Task\TaskCollectionView.aspx" />
+    <Content Include="Application\Task\TaskCollectionViewMobile.aspx" />
+    <Content Include="Application\Task\TaskInfo.aspx" />
+    <Content Include="Application\Task\TaskList.aspx" />
+    <Content Include="Aspose.Total.lic" />
+    <Content Include="Assets\images\404.png" />
+    <Content Include="Assets\images\500.png" />
+    <Content Include="Assets\images\62.jpg" />
+    <Content Include="Assets\images\67-991-611-01.png" />
+    <Content Include="Assets\images\action-icon.png" />
+    <Content Include="Assets\images\ajax-loader.gif" />
+    <Content Include="Assets\images\arrow-action-item-hover.png" />
+    <Content Include="Assets\images\arrow-action-item.png" />
+    <Content Include="Assets\images\arrow-default-ie.png" />
+    <Content Include="Assets\images\arrow-default.png" />
+    <Content Include="Assets\images\arrow-hover-ie.png" />
+    <Content Include="Assets\images\arrow-hover.png" />
+    <Content Include="Assets\images\arrow-l-ie.png" />
+    <Content Include="Assets\images\arrow-l.png" />
+    <Content Include="Assets\images\arrow-start-ie.png" />
+    <Content Include="Assets\images\arrow-start.png" />
+    <Content Include="Assets\images\arrow.png" />
+    <Content Include="Assets\images\bg.png" />
+    <Content Include="Assets\images\btn-download.png" />
+    <Content Include="Assets\images\btn-image-ie.png" />
+    <Content Include="Assets\images\btn-image.png" />
+    <Content Include="Assets\images\btn-task.png" />
+    <Content Include="Assets\images\close-icon.png" />
+    <Content Include="Assets\images\down1.png" />
+    <Content Include="Assets\images\edit.png" />
+    <Content Include="Assets\images\excel-image.png" />
+    <Content Include="Assets\images\eye.png" />
+    <Content Include="Assets\images\huayang-ie.png" />
+    <Content Include="Assets\images\huayang.png" />
+    <Content Include="Assets\images\icon-attachment-del.png" />
+    <Content Include="Assets\images\icon-btn-plus.png" />
+    <Content Include="Assets\images\icon-btn-search.png" />
+    <Content Include="Assets\images\icon-chkbox.png" />
+    <Content Include="Assets\images\icon-clone.png" />
+    <Content Include="Assets\images\icon-close.png" />
+    <Content Include="Assets\images\icon-delet2.png" />
+    <Content Include="Assets\images\icon-delete.png" />
+    <Content Include="Assets\images\icon-more-ie.png" />
+    <Content Include="Assets\images\icon-more.png" />
+    <Content Include="Assets\images\icon-myTask.png" />
+    <Content Include="Assets\images\icon-myTemplate.png" />
+    <Content Include="Assets\images\icon-navbar-allTask-active-ie.png" />
+    <Content Include="Assets\images\icon-navbar-allTask-active.png" />
+    <Content Include="Assets\images\icon-navbar-allTask-default-ie.png" />
+    <Content Include="Assets\images\icon-navbar-allTask-default.png" />
+    <Content Include="Assets\images\icon-navbar-allTemplate-active-ie.png" />
+    <Content Include="Assets\images\icon-navbar-allTemplate-active.png" />
+    <Content Include="Assets\images\icon-navbar-allTemplate-default-ie.png" />
+    <Content Include="Assets\images\icon-navbar-allTemplate-default.png" />
+    <Content Include="Assets\images\icon-navbar-fill-active-ie.png" />
+    <Content Include="Assets\images\icon-navbar-fill-active.png" />
+    <Content Include="Assets\images\icon-navbar-fill-default-ie.png" />
+    <Content Include="Assets\images\icon-navbar-fill-default.png" />
+    <Content Include="Assets\images\icon-navbar-system-active-ie.png" />
+    <Content Include="Assets\images\icon-navbar-system-active.png" />
+    <Content Include="Assets\images\icon-navbar-system-default-ie.png" />
+    <Content Include="Assets\images\icon-navbar-system-default.png" />
+    <Content Include="Assets\images\icon-navbar-task-active-ie.png" />
+    <Content Include="Assets\images\icon-navbar-task-active.png" />
+    <Content Include="Assets\images\icon-navbar-task-default-ie.png" />
+    <Content Include="Assets\images\icon-navbar-task-default.png" />
+    <Content Include="Assets\images\icon-navbar-template-active-ie.png" />
+    <Content Include="Assets\images\icon-navbar-template-active.png" />
+    <Content Include="Assets\images\icon-navbar-template-default-ie.png" />
+    <Content Include="Assets\images\icon-navbar-template-default.png" />
+    <Content Include="Assets\images\icon-navbar-tutorial-active-ie.png" />
+    <Content Include="Assets\images\icon-navbar-tutorial-active.png" />
+    <Content Include="Assets\images\icon-navbar-tutorial-default-ie.png" />
+    <Content Include="Assets\images\icon-navbar-tutorial-default.png" />
+    <Content Include="Assets\images\icon-plan.png" />
+    <Content Include="Assets\images\icon-plus.png" />
+    <Content Include="Assets\images\icon-radio.png" />
+    <Content Include="Assets\images\icon-search.png" />
+    <Content Include="Assets\images\icon-select.png" />
+    <Content Include="Assets\images\icon-tag-active1.png" />
+    <Content Include="Assets\images\icon-tag-active2.png" />
+    <Content Include="Assets\images\icon-tag-active3.png" />
+    <Content Include="Assets\images\icon-tag-active4.png" />
+    <Content Include="Assets\images\icon-tag-active5.png" />
+    <Content Include="Assets\images\icon-tag-default1.png" />
+    <Content Include="Assets\images\icon-tag-default2.png" />
+    <Content Include="Assets\images\icon-tag-default3.png" />
+    <Content Include="Assets\images\icon-tag-default4.png" />
+    <Content Include="Assets\images\icon-tag-default5.png" />
+    <Content Include="Assets\images\icon-tag-ie-active1.png" />
+    <Content Include="Assets\images\icon-tag-ie-active2.png" />
+    <Content Include="Assets\images\icon-tag-ie-active3.png" />
+    <Content Include="Assets\images\icon-tag-ie-active4.png" />
+    <Content Include="Assets\images\icon-tag-ie-active5.png" />
+    <Content Include="Assets\images\icon-tag-ie-default1.png" />
+    <Content Include="Assets\images\icon-tag-ie-default3.png" />
+    <Content Include="Assets\images\icon-tag-ie-default4.png" />
+    <Content Include="Assets\images\icon-tag-ie-default5.png" />
+    <Content Include="Assets\images\icon-tag.png" />
+    <Content Include="Assets\images\icon-task.png" />
+    <Content Include="Assets\images\icon-template.png" />
+    <Content Include="Assets\images\icon-text.png" />
+    <Content Include="Assets\images\icon-top.png" />
+    <Content Include="Assets\images\icon-user.png" />
+    <Content Include="Assets\images\icon-view.png" />
+    <Content Include="Assets\images\icon_arr_down.png" />
+    <Content Include="Assets\images\icon_arr_up.png" />
+    <Content Include="Assets\images\input_bg_login_wev8.gif" />
+    <Content Include="Assets\images\leave.png" />
+    <Content Include="Assets\images\lg_login_sbmt_hover_wev8.png" />
+    <Content Include="Assets\images\lg_login_sbmt_wev8.png" />
+    <Content Include="Assets\images\loading-ie.gif" />
+    <Content Include="Assets\images\loading.gif" />
+    <Content Include="Assets\images\logo.png" />
+    <Content Include="Assets\images\modal-bg.png" />
+    <Content Include="Assets\images\num1.png" />
+    <Content Include="Assets\images\num2.png" />
+    <Content Include="Assets\images\num3.png" />
+    <Content Include="Assets\images\ok.png" />
+    <Content Include="Assets\images\SaveButton.png" />
+    <Content Include="Assets\images\shenpiexcel.png" />
+    <Content Include="Assets\images\step1.png" />
+    <Content Include="Assets\images\step2.png" />
+    <Content Include="Assets\images\SubmitButton.png" />
+    <Content Include="Assets\images\up.png" />
+    <Content Include="Assets\images\workflow_button_bg.png" />
+    <Content Include="Assets\scripts\Admin\AdminTaskList.js" />
+    <Content Include="Assets\scripts\Admin\AdminTemplateList.js" />
+    <Content Include="Assets\scripts\common\base.utils.js" />
+    <Content Include="Assets\scripts\common\components\vue.bootstrap-select.js" />
+    <Content Include="Assets\scripts\common\components\vue.circle.js" />
+    <Content Include="Assets\scripts\common\components\vue.datepicker.js" />
+    <Content Include="Assets\scripts\common\components\vue.dialog.js" />
+    <Content Include="Assets\scripts\common\components\vue.excel.js" />
+    <Content Include="Assets\scripts\common\components\vue.fileupload.js" />
+    <Content Include="Assets\scripts\common\components\vue.pager.js" />
+    <Content Include="Assets\scripts\common\components\vue.select2.js" />
+    <Content Include="Assets\scripts\common\vue.utils.js" />
+    <Content Include="Assets\scripts\cycle.js" />
+    <Content Include="Assets\scripts\jquery.pagination.js" />
+    <Content Include="Assets\scripts\jquery.pagination.min.js" />
+    <Content Include="Assets\scripts\Layout.js" />
+    <Content Include="Assets\scripts\Models\TemplateList.js" />
+    <Content Include="Assets\scripts\Models\TemplateModel.js" />
+    <Content Include="Assets\scripts\mricode.pagination.js" />
+    <Content Include="Assets\scripts\OWA\Preview.js" />
+    <Content Include="Assets\scripts\Process\DoneList.js" />
+    <Content Include="Assets\scripts\Process\TodoList.js" />
+    <Content Include="Assets\scripts\raphael.js" />
+    <Content Include="Assets\scripts\Task\CommonEvent.js" />
+    <Content Include="Assets\scripts\Task\TaskAdd.js" />
+    <Content Include="Assets\scripts\Task\TaskCollection.js" />
+    <Content Include="Assets\scripts\Task\TaskCollectionMobile.js" />
+    <Content Include="Assets\scripts\Task\TaskCollectionView.js" />
+    <Content Include="Assets\scripts\Task\TaskCollectionViewMobile.js" />
+    <Content Include="Assets\scripts\Task\TaskInfo.js" />
+    <Content Include="Assets\scripts\Task\TaskList.js" />
+    <Content Include="Assets\scripts\vue-resource.min.js" />
+    <Content Include="Assets\scripts\vue.min.js" />
+    <Content Include="Assets\styles\content.css" />
+    <Content Include="Assets\styles\excel.css" />
+    <Content Include="Assets\styles\login.css" />
+    <Content Include="Assets\styles\main.css" />
+    <Content Include="Assets\styles\page.css" />
+    <Content Include="Assets\styles\sheet.css" />
+    <Content Include="Assets\styles\site.css" />
+    <Content Include="Assets\tmpl\Common.html" />
+    <Content Include="Assets\vendors\ajax-fileupload\js\jquery.fileupload-ui.js" />
+    <Content Include="Assets\vendors\ajax-fileupload\js\jquery.fileupload.ext.js" />
+    <Content Include="Assets\vendors\ajax-fileupload\js\jquery.fileupload.js" />
+    <Content Include="Assets\vendors\ajax-fileupload\js\jquery.iframe-transport.js" />
+    <Content Include="Assets\vendors\ajax-fileupload\js\jquery.ui.widget.js" />
+    <Content Include="Assets\vendors\bootstrap-select\js\bootstrap-select.min.js" />
+    <Content Include="Assets\vendors\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Assets\vendors\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Assets\vendors\bootstrap\css\bootstrap.css" />
+    <Content Include="Assets\vendors\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Assets\vendors\bootstrap\css\docs.min.css" />
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\vendors\bootstrap\js\bootstrap.js" />
+    <Content Include="Assets\vendors\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Assets\vendors\bootstrap\js\npm.js" />
+    <Content Include="Assets\vendors\cordova\cordova.js" />
+    <Content Include="Assets\vendors\cordova\cordova_plugins.js" />
+    <Content Include="Assets\vendors\css3-mediaqueries\css3-mediaqueries.js" />
+    <Content Include="Assets\vendors\css3-mediaqueries\css3-mediaqueries.min.js" />
+    <Content Include="Assets\vendors\datepicker\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="Assets\vendors\datepicker\css\bootstrap-datepicker3.min.css" />
+    <Content Include="Assets\vendors\datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="Assets\vendors\datepicker\js\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="Assets\vendors\font-awesome\css\font-awesome.css" />
+    <Content Include="Assets\vendors\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\vendors\html5shiv\html5.js" />
+    <Content Include="Assets\vendors\html5shiv\html5.min.js" />
+    <Content Include="Assets\vendors\jquery-blockui\js\jquery.blockUI.js" />
+    <Content Include="Assets\vendors\jquery-placeholder\jquery.placeholder.js" />
+    <Content Include="Assets\vendors\jquery-placeholder\jquery.placeholder.min.js" />
+    <Content Include="Assets\vendors\jquery\jquery.js" />
+    <Content Include="Assets\vendors\jquery\jquery.min.js" />
+    <Content Include="Assets\vendors\message\css\message.css" />
+    <Content Include="Assets\vendors\modernizr\modernizr.js" />
+    <Content Include="Assets\vendors\modernizr\modernizr.min.js" />
+    <Content Include="Assets\vendors\react\common\component.js" />
+    <Content Include="Assets\vendors\react\react-dom-server.js" />
+    <Content Include="Assets\vendors\react\react-dom-server.min.js" />
+    <Content Include="Assets\vendors\react\react-dom.js" />
+    <Content Include="Assets\vendors\react\react-dom.min.js" />
+    <Content Include="Assets\vendors\react\react-with-addons.js" />
+    <Content Include="Assets\vendors\react\react-with-addons.min.js" />
+    <Content Include="Assets\vendors\react\react.js" />
+    <Content Include="Assets\vendors\react\react.min.js" />
+    <Content Include="Assets\vendors\respond\respond.js" />
+    <Content Include="Assets\vendors\respond\respond.min.js" />
+    <Content Include="Assets\vendors\select2\css\select2.min.css" />
+    <Content Include="Assets\vendors\select2\js\select2.min.js" />
+    <Content Include="Assets\vendors\userselect\css\common.userselect.ctrl.css" />
+    <Content Include="Assets\vendors\userselect\css\common.userselect.ctrl.mobile.css" />
+    <Content Include="Assets\vendors\userselect\css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\vendors\userselect\images\arrow-gif.gif" />
+    <Content Include="Assets\vendors\userselect\images\btn_blue_l.png" />
+    <Content Include="Assets\vendors\userselect\images\btn_blue_r.png" />
+    <Content Include="Assets\vendors\userselect\images\user_icon_ajax_loader.gif" />
+    <Content Include="Assets\vendors\userselect\images\user_icon_arr_left.png" />
+    <Content Include="Assets\vendors\userselect\images\user_icon_avatar.jpg" />
+    <Content Include="Assets\vendors\userselect\images\user_icon_avatar.png" />
+    <Content Include="Assets\vendors\userselect\images\user_icon_back.png" />
+    <Content Include="Assets\vendors\userselect\images\user_icon_delete.png" />
+    <Content Include="Assets\vendors\userselect\images\user_icon_return_top.png" />
+    <Content Include="Assets\vendors\userselect\images\user_icon_selected_active.png" />
+    <Content Include="Assets\vendors\userselect\images\user_icon_selected_default.png" />
+    <Content Include="Assets\vendors\userselect\images\user_icon_select_all.png" />
+    <Content Include="Assets\vendors\userselect\images\user_icon_unselect_all.png" />
+    <Content Include="Assets\vendors\userselect\js\common.userselect.ctrl.js" />
+    <Content Include="Assets\vendors\userselect\js\common.userselect.ctrl.mobile.js" />
+    <Content Include="Assets\vendors\vue-mdl\vue-mdl.min.js" />
+    <Content Include="Assets\vendors\vue-strap\isMobileBrowser.js" />
+    <Content Include="Assets\vendors\vue-strap\vue-strap-lang.js" />
+    <Content Include="Assets\vendors\vue-strap\vue-strap.min.js" />
+    <Content Include="Assets\vendors\wf\css\common.workflow.css" />
+    <Content Include="Assets\vendors\workflow\css\wanda-wf-client.css" />
+    <Content Include="Assets\vendors\workflow\js\wanda-wf-client.js" />
+    <Content Include="Assets\vendors\workflow\js\Workflow.js" />
+    <Content Include="packages.config" />
+    <Content Include="Public\Bridge.aspx" />
+    <Content Include="Public\500.html" />
+    <Content Include="Public\404.html" />
+    <Content Include="Public\demo.html" />
+    <Content Include="Public\Login.aspx" />
+    <Content Include="Public\Logout.aspx" />
+    <Content Include="Public\MobileAppBridge.aspx" />
+    <Content Include="Public\OABridge.aspx" />
+    <Content Include="SiteMaster\bsCtrl.ascx" />
+    <Content Include="SiteMaster\fmCtrl.ascx" />
+    <Content Include="SiteMaster\userSelectCtrl.ascx" />
+    <Content Include="SiteMaster\wfCtrl.ascx" />
+    <Content Include="todoListMobile.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\vendors\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Assets\vendors\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="Assets\vendors\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Assets\vendors\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\vendors\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\vendors\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Assets\vendors\userselect\css\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\vendors\userselect\css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\vendors\userselect\css\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\vendors\userselect\css\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="SiteMaster\CollectionLayout.Master" />
+    <Content Include="SiteMaster\CollectionLayoutMobile.Master" />
+    <Content Include="SiteMaster\Layout.Master" />
+    <Content Include="SiteMaster\PageLayout.master" />
+    <Content Include="SiteMaster\Empty.Master" />
+    <None Include="Properties\PublishProfiles\DailyCollectingData.WebPortal.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\01.Framework\02.Data\02.Data.csproj">
+      <Project>{341B35E4-F599-4853-A446-51010C3CB650}</Project>
+      <Name>02.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\01.Framework\03.Web\03.Web.csproj">
+      <Project>{1F9D30B3-8221-4528-A14E-CA3C65313677}</Project>
+      <Name>03.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\02.Lib\00.Common\00.Common.csproj">
+      <Project>{d4ee0059-4059-452d-af8c-8bca617544f0}</Project>
+      <Name>00.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\02.Lib\01.Model\01.Model.csproj">
+      <Project>{9a6d2e8c-620b-49fd-8470-ec40b70deba4}</Project>
+      <Name>01.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\02.Lib\02.ViewModel\02.ViewModel.csproj">
+      <Project>{bae0b3b7-aae1-4a76-9e84-e5721c0d2610}</Project>
+      <Name>02.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\02.Lib\04.BLL\04.BLL.csproj">
+      <Project>{808f0112-4668-436d-8e61-c2f438045a16}</Project>
+      <Name>04.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\06.Plugin\03.UserSelect\03.UserSelect.csproj">
+      <Project>{c05efedd-2403-48a0-b29c-fddda2b1bed9}</Project>
+      <Name>03.UserSelect</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\06.Plugin\04.SSO\04.SSO.csproj">
+      <Project>{3bc18b77-1027-45b1-bae9-396b6e14de38}</Project>
+      <Name>04.SSO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\06.Plugin\08.Auth\08.Auth.csproj">
+      <Project>{6dab914c-a21f-4e1e-b2c3-3a0654ed8887}</Project>
+      <Name>08.Auth</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1814</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1814/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此项目引用这台计算机上缺少的 NuGet 程序包。使用 NuGet 程序包还原可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

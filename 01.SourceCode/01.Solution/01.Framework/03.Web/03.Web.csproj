@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F9D30B3-8221-4528-A14E-CA3C65313677}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.Web</RootNamespace>
+    <AssemblyName>Framework.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
+      <HintPath>..\00.MSEntLib\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\ClientCssResourceAttribute.cs" />
+    <Compile Include="Attributes\ClientPropertyNameAttribute.cs" />
+    <Compile Include="Attributes\ClientScriptResourceAttribute.cs" />
+    <Compile Include="Attributes\ComponentReferenceAttribute.cs" />
+    <Compile Include="Attributes\ElementReferenceAttribute.cs" />
+    <Compile Include="Attributes\ProcessRequestAttirbute.cs" />
+    <Compile Include="Attributes\RequiredPropertyAttribute.cs" />
+    <Compile Include="Attributes\ScriptControlEventAttribute.cs" />
+    <Compile Include="Attributes\ScriptControlMethodAttribute.cs" />
+    <Compile Include="Config\ConfigSectionFactory.cs" />
+    <Compile Include="Config\ContentTypesSection.cs" />
+    <Compile Include="Config\FilePathConfigElement.cs" />
+    <Compile Include="Config\LibWebSectionGroup.cs" />
+    <Compile Include="Config\PageContentSection.cs" />
+    <Compile Include="Config\PageModulesSection.cs" />
+    <Compile Include="Config\WebConfigFactory.cs" />
+    <Compile Include="Config\WebControlsSection.cs" />
+    <Compile Include="Download\AttachmentHandler.cs" />
+    <Compile Include="Download\ExcelCategoryHandler.cs" />
+    <Compile Include="Download\ExcelGenerator.cs" />
+    <Compile Include="Download\ExcelHttpHandler.cs" />
+    <Compile Include="Exception\CustomizedException.cs" />
+    <Compile Include="Json\DefaultTypeResolver.cs" />
+    <Compile Include="Json\FormatDateJsonHelper.cs" />
+    <Compile Include="Json\JavaScriptConverterAttribute.cs" />
+    <Compile Include="Json\JsonConverter.cs" />
+    <Compile Include="Json\JsonHelper.cs" />
+    <Compile Include="Json\JsonSerializerFactory.cs" />
+    <Compile Include="MVC\ActionResult\ActionResult.cs" />
+    <Compile Include="MVC\ActionResult\EntityDefin.cs" />
+    <Compile Include="MVC\ActionResult\JsonResut.cs" />
+    <Compile Include="MVC\Controller\BaseController.cs" />
+    <Compile Include="MVC\JxMvcHttpHandler.cs" />
+    <Compile Include="MVC\LibController.cs" />
+    <Compile Include="MVC\LibViewModel.cs" />
+    <Compile Include="MVC\RequestProcess\ActionInfo.cs" />
+    <Compile Include="MVC\RequestProcess\ActionMatchProvider.cs" />
+    <Compile Include="MVC\RequestProcess\ControllerHelper.cs" />
+    <Compile Include="MVC\RequestProcess\ControllerInfo.cs" />
+    <Compile Include="MVC\RequestProcess\HandlerInfoCache.cs" />
+    <Compile Include="MVC\RequestProcess\LibActionAttirbute.cs" />
+    <Compile Include="MVC\ResponseWriter\HtmlResponseWriter.cs" />
+    <Compile Include="MVC\ResponseWriter\JsonResponseWriter.cs" />
+    <Compile Include="MVC\ResponseWriter\ResponseWriter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resource.Designer.cs" />
+    <Compile Include="Security\Authentication\Configuration\AuthenticateDirSettings.cs" />
+    <Compile Include="Security\Authentication\Configuration\AuthenticationClientSection.cs" />
+    <Compile Include="Security\Authentication\Configuration\AuthenticationConfig.cs" />
+    <Compile Include="Security\Authentication\Configuration\AuthenticationServerSection.cs" />
+    <Compile Include="Security\Authentication\Cryption\IStringEncryption.cs" />
+    <Compile Include="Security\Authentication\Cryption\ITicketEncryption.cs" />
+    <Compile Include="Security\Authentication\LibAuthentication.cs" />
+    <Compile Include="Security\Authentication\LibAuthenticationEventArgs.cs" />
+    <Compile Include="Security\Authentication\LibAuthenticationEventHandler.cs" />
+    <Compile Include="Security\Authentication\LibAuthenticationModule.cs" />
+    <Compile Include="Security\Authentication\LoginUserInfo.cs" />
+    <Compile Include="Security\Authentication\Principal\ILibAuthenticationTicket.cs" />
+    <Compile Include="Security\Authentication\Principal\ILoginUser.cs" />
+    <Compile Include="Security\Authentication\Principal\LibAuthenticationTicket.cs" />
+    <Compile Include="Security\Authentication\Principal\LibIdentity.cs" />
+    <Compile Include="Security\Authentication\Principal\LibPricipal.cs" />
+    <Compile Include="Security\Authentication\Principal\LoginUser.cs" />
+    <Compile Include="Security\Authentication\Principal\PrincipalBase.cs" />
+    <Compile Include="Security\Authentication\Serializer\LibAuthenticationTicketConverter.cs" />
+    <Compile Include="Utility\FileHelper.cs" />
+    <Compile Include="Utility\ResourceUtility.cs" />
+    <Compile Include="Utility\SSOClaimsIdentity.cs" />
+    <Compile Include="Utility\SSOClaimsPrincipal.cs" />
+    <Compile Include="Utility\WebHelper.cs" />
+    <Compile Include="Utility\WebUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resource.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\01.Core\01.Core.csproj">
+      <Project>{1b0b51d4-afd5-46a7-a74f-70aea0c55519}</Project>
+      <Name>01.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

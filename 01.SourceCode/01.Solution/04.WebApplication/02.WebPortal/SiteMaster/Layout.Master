@@ -1,0 +1,282 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="WebApplication.WebPortal.SiteMaster.Layout" %>
+
+<%@ Register Src="~/SiteMaster/fmCtrl.ascx" TagPrefix="uc1" TagName="fmCtrl" %>
+<%@ Register Src="~/SiteMaster/bsCtrl.ascx" TagPrefix="uc1" TagName="bsCtrl" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>数据收集系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <uc1:bsCtrl runat="server" ID="bsCtrl" />
+    <!--Basic Styles-->
+    <link href="<%=ResolveUrl("~/Assets/vendors/bootstrap/css/bootstrap.min.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Assets/vendors/bootstrap/css/bootstrap-theme.min.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Assets/vendors/bootstrap/css/docs.min.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Assets/vendors/font-awesome/css/font-awesome.min.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Assets/vendors/select2/css/select2.min.css") %>" rel="stylesheet" />
+    <!--Main Page Styles-->
+    <link href="<%=ResolveUrl("~/Assets/styles/main.css?v=1") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Assets/styles/site.css") %>" rel="stylesheet" />
+    <!--Basic JavaScripts-->
+    <script src="<%=ResolveUrl("~/Assets/vendors/modernizr/modernizr.min.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Assets/vendors/jquery/jquery.min.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Assets/vendors/bootstrap/js/bootstrap.min.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Assets/vendors/select2/js/select2.min.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Assets/vendors/jquery-blockUI/js/jquery.blockUI.js") %>"></script>
+    <!--[if lte IE 9]>
+        <script src="<%=ResolveUrl("~/Assets/vendors/respond/respond.min.js") %>"></script>
+        <script src="<%=ResolveUrl("~/Assets/vendors/html5shiv/html5.min.js") %>"></script>
+        <script src="<%=ResolveUrl("~/Assets/vendors/css3-mediaqueries/css3-mediaqueries.min.js") %>"></script>
+        <script src="<%=ResolveUrl("~/Assets/vendors/jquery-placeholder/jquery.placeholder.min.js") %>"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="<%=ResolveUrl("~/Assets/scripts/vue.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Assets/scripts/vue-resource.min.js") %>"></script>
+    <%--<script type="text/javascript" src="<%=ResolveUrl("~/Assets/vendors/vue-mdl/vue-mdl.min.js") %>"></script>--%>
+
+    <script src="<%=ResolveUrl("~/Assets/scripts/common/base.utils.js?v=3") %>"></script>
+    <script src="<%=ResolveUrl("~/Assets/scripts/common/vue.utils.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Assets/scripts/common/components/vue.select2.js") %>"></script>
+   <%-- <%if (SSO.SSOModules.IsInApp)
+        {
+    %>
+    <script type="text/javascript" src="http://10.199.202.43/jsdk2/jssdk/js/cordova.js"></script>
+    <%
+        } %>--%>
+
+
+
+    <uc1:fmCtrl runat="server" ID="fmCtrl" />
+
+    <script defer="defer" type="text/javascript" src="<%=ResolveUrl("~/Assets/scripts/Layout.js") %>"></script>
+
+
+    <asp:ContentPlaceHolder ID="styles" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/x-template" id="select-template">
+      <select>
+        
+        <%--<slot></slot>--%>
+      </select>
+    </script>
+
+    <script type="text/template" id="bootstrap-select">
+        <select>
+            <option v-for="o in options" v-bind:value="o.id" v-text="o.text"></option>
+        </select>
+    </script>
+
+
+    <script type="text/template" id="pager">
+        <div class="page-wrap text-center">
+            <!--<ul class="page-info clear" v-if="!isScroll">
+                <li>当前页：<span v-text="pageIndex"></span></li>
+                <li>总数：<span v-text="total"></span></li>
+                <li>总页数：<span v-text="pagerCount"></span></li>
+                <li>每页数：<span v-text="pageSize"></span></li>
+            </ul>-->
+            <ul class="page-bar clear" v-if="!isScroll">
+                <li>
+                    <button v-on:click="paging(1)">首页</button></li>
+                <!-- v-if="isFirst"-->
+                <li>
+                    <button v-on:click="paging(pageIndex-1)" v-bind:class="{ 'prev-disabled': isPrevDisabled }" v-bind:disabled="isPrevDisabled">上一页</button></li>
+                <!-- v-if="isPrevious" -->
+                <li>
+                    <button v-on:click="paging(pageIndex+1)" v-bind:class="{ 'next-disabled': isNextDisabled }" v-bind:disabled="isNextDisabled">下一页</button></li>
+                <!-- v-if="isNext" -->
+                <li>
+                    <button v-on:click="paging(pagerCount)">尾页</button></li>
+                <!-- v-if="isLast" -->
+                <li class="page-count">
+                    <span>页数：</span>
+                    <span v-text="pageIndex"></span>
+                    <span>/</span>
+                    <span v-text="pagerCount"></span>
+                </li>
+                <!--<li><a href="javascript:void(0)" class="gotoPage" v-on:click="gotoPage()">GO</a></li>-->
+            </ul>
+            <div class="load" v-if="loading">正在加载</div>
+        </div>
+    </script>
+</head>
+<body>
+    <form id="frm1" runat="server" onsubmit="return false;">
+        <!-- onkeydown="if(event.keyCode==13)return false;" -->
+        <button type="button" class="hidden" name="btnFix"></button>
+        <a id="navigate-top" href="#" class="back-top" v-bind:class="{ 'mobile-back-top': isMobile }">
+            <img src="<%=ResolveUrl("~/Assets/images/icon-top.png") %>" alt="返回顶部" />
+        </a>
+        <header id="header">
+            <div class="pc-header" v-if="!isMobile" v-cloak>
+                <div class="fm-bg clear" id="wd-fm" style="position: relative;background-color:rgb(232, 235, 239) !important; z-index: 999999;text-align:right;padding-right:10%;padding-top:5px;padding-bottom:5px">
+                    欢迎您：<%=Framework.Web.Utility.WebHelper.GetCurrentUser().CNName %>（<%=Framework.Web.Utility.WebHelper.GetCurrentUser().ActualUnitName %>）&nbsp;&nbsp;&nbsp;&nbsp;<a href="/Public/Logout.aspx">退出</a>
+                </div>
+                <div id="navbar" class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div v-if="!isMobile" class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sm-navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="<%=ResolveUrl("~/Application/Task/TaskList.aspx") %>">
+                                <small>
+                                    <img src="<%=ResolveUrl("~/Assets/images/logo.png") %>" alt="数据收集系统" title="" />
+                                    <span class="logo-text">数据收集系统</span>
+                                </small>
+                            </a>
+                        </div>
+                        <div v-if="isMobile" class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sm-navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="<%=ResolveUrl("~/Application/Task/TaskList.aspx") %>">
+                                <small>
+                                    <img src="<%=ResolveUrl("~/Assets/images/logo.png") %>" alt="数据收集系统" title="" />
+                                    <span class="logo-text">数据收集系统</span>
+                                </small>
+                            </a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="sm-navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right" id="navbar-menu">
+                                <li class="my-template"><a class="clear" href="<%=ResolveUrl("~/Application/Models/TemplateList.aspx")%>"><span>我的模板</span></a></li>
+                                <li class="delivery-list"><a class="clear" href="<%=ResolveUrl("~/Application/Task/TaskList.aspx")%>"><span>我的任务</span></a></li>
+                                <li class="my-fill"><a class="clear" href="<%=ResolveUrl("~/Application/Process/TodoList.aspx")%>"><span>我的填报</span></a></li>
+                                <li class="quick-start"><a class="clear" href="<%=ResolveUrl("~/Application/Navigation/QuickStart.aspx")%>"><span>新手教程</span></a></li>
+                                <%--<li class="system-management hidden"><a class="clear" href="#"><span>系统管理</span></a></li>--%>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-header" v-if="isMobile" v-cloak>
+                <div id="navbar" class="navbar navbar-default" role="navigation">
+                    <button type="button" class="navbar-toggle btn-toggle mobile-toggle" data-toggle="collapse" data-target="#sm-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h1 class="header-t">
+                        <%=(this.Page as WebApplication.WebPortal.SiteMaster.PageBase).PageName %>
+                    </h1>
+                    <div class="collapse navbar-collapse mobile-navbar-collapse" id="sm-navbar-collapse">
+                        <ul class="nav navbar-nav mobile-nav" id="navbar-menu">
+                            <%if ((this.Page as WebApplication.WebPortal.SiteMaster.PageBase).IsHasAllTemplate)
+                                {
+                            %>
+                            <li class="all-template"><a class="clear" href="<%=ResolveUrl("~/Application/Admin/AdminTemplateList.aspx")%>"><span>全部模板</span></a></li>
+                            <% } %>
+
+                            <%if ((this.Page as WebApplication.WebPortal.SiteMaster.PageBase).IsHasAllTask)
+                                {
+                            %>
+                            <li class="all-task"><a class="clear" href="<%=ResolveUrl("~/Application/Admin/AdminTaskList.aspx")%>"><span>全部任务</span></a></li>
+                            <% } %>
+
+                            <li class="my-template"><a class="clear" href="<%=ResolveUrl("~/Application/Models/TemplateList.aspx")%>"><span>我的模板</span></a></li>
+                            <li class="delivery-list"><a class="clear" href="<%=ResolveUrl("~/Application/Task/TaskList.aspx")%>"><span>我的任务</span></a></li>
+                            <li class="my-fill"><a class="clear" href="<%=ResolveUrl("~/Application/Process/TodoList.aspx")%>"><span>我的填报</span></a></li>
+                            <li class="quick-start "><a class="clear" href="<%=ResolveUrl("~/Application/Navigation/QuickStart.aspx")%>"><span>新手教程</span></a></li>
+                            <li class="system-management hidden"><a class="clear" href="#"><span>系统管理</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <asp:ContentPlaceHolder ID="contents" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </section>
+
+        <!--<footer id="footer" v-if="!isMobile">
+            <div class="copyright">
+                <div class="container">
+                    <p class="text-center">版权所有&copy;2016 大连万达集团股份有限公司.</p>
+                </div>
+            </div>
+        </footer>-->
+        <div class="popup-layout">
+            <div class="popup-modal">
+                <div class="ie-tips clear">
+                    <p>您的浏览器版本过低，请更新到IE10及其以上浏览器，以获得更好的体验！</p>
+                    <p>请点击以下链接下载更新 <a href="https://www.microsoft.com/zh-cn/download/internet-explorer.aspx" target="_blank">https://www.microsoft.com/zh-cn/download/internet-explorer.aspx</a></p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(function () {
+                //判断IE浏览器小于等于IE9时，提示更新
+                var b_name = navigator.appName;
+                var b_version = navigator.appVersion;
+                var version = b_version.split(";");
+                var trim_version = version[1].replace(/[ ]/g, "");
+                var html = '';
+                if (b_name == "Microsoft Internet Explorer") {
+                    /*如果是小于等于IE9*/
+                    if (trim_version == "MSIE9.0") {
+                        html += '<div class="ie-tips clear">';
+                        html += '<p>您的浏览器版本过低，请更新到IE10及其以上浏览器，以获得更好的体验！</p>';
+                        html += '<p>请点击以下链接下载更新 <a href="https://www.microsoft.com/zh-cn/download/internet-explorer.aspx" target="_blank">https://www.microsoft.com/zh-cn/download/internet-explorer.aspx</a></p>';
+                        html += '</div>';
+                        $(html).insertBefore("#wd-fm");
+                        var $height = $('#header').height();
+                        $("#content").css("padding-top", $height + 33 + "px");
+                    } else if (trim_version == "MSIE8.0" || trim_version == "MSIE7.0" || trim_version == "MSIE6.0") {
+                        $("#content").css("display", "none");
+                        $(".popup-layout").css("display", "block");
+                    }
+                }
+
+                $(window).on("scroll resize", function (e) {
+                    var y = $(this).scrollTop();
+                    if (y == 0) {
+                        $('#navigate-top').removeClass("visible");
+                    }
+                    else {
+                        $('#navigate-top').addClass("visible");
+                    }
+                });
+
+                $("#navigate-top").click(function () {
+                    $('html, body').animate({ scrollTop: '0px' }, 300);
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            function CloseWindow() {
+                cordova.exec(sucbackAction, onFail, "WDNaviPlugin", "backAction", ["1"]);
+            }
+            function sucbackAction() {
+                alert('a');
+            }
+            function onFail(message) {
+                alert('Failed because: ' + message);
+            }
+        </script>
+        <asp:ContentPlaceHolder ID="scripts" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </form>
+</body>
+</html>

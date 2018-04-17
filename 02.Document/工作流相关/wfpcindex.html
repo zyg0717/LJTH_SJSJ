@@ -1,0 +1,328 @@
+﻿<!DOCTYPE HTML PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title></title>
+    <!--<script src="js/vue.min.js"></script>-->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <link href="http://192.168.50.72:81/UserSelectService/css/bpf-sdk-core.css" rel="stylesheet" />
+    <link href="http://192.168.50.72:81/UserSelectService/css/bpf-userselect-pc.css" rel="stylesheet" />
+    <script src="http://192.168.50.72:81/UserSelectService/js/bpf-sdk-core.js"></script>
+    <script src="http://192.168.50.72:81/UserSelectService/js/bpf-userselect-client.js?v=1"></script>
+    <script src="http://192.168.50.72:81/UserSelectService/js/bpf-userselect-lang-zh-cn.js?v=1"></script>
+    <script src="http://192.168.50.72:81/UserSelectService/js/bpf-userselect-pc.js?v=1"></script>
+
+    <link href="http://192.168.50.72:81/RuntimeService/css/bpf-workflow-pc.css" rel="stylesheet" />
+    <script src="http://192.168.50.72:81/RuntimeService/js/bpf-workflow-client.js"></script>
+    <script src="http://192.168.50.72:81/RuntimeService/js/bpf-workflow-lang-zh-cn.js"></script>
+    <script src="http://192.168.50.72:81/RuntimeService/js/bpf-workflow-pc.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/jquery.tmpl.js"></script>
+    <script type="text/javascript">
+        var Params = {};
+        var DynamicRole = {};
+        var userList = [];
+        var EnableRefresh = false;
+        JQZepto(function () {
+            bpf_wf_client.initAjaxSetting("#processMobile", false, {
+                OnBeforeExecute: BeforeAction,
+                OnSaveApplicationData: SaveApplicationData,
+                OnAfterExecute: AfterAction,
+                IsSaveDraftToDoWork: true,
+                OnExecuteCheck: ExecuteCheck,
+                CustomerSceneSetting: {
+                    Language: "CN"
+                },
+                UserSelectSetting: {
+                    IsNeedHiddenNav: true,
+                    TopValue: 0
+                }
+            });
+            bpf_wf_tool.bindUserSelect($("#btnSelectUser"), function (data) {
+                bpf_wf_tool.appendUserListToDom($("#spResult"), data, false, function (item) {
+                    userList.push(item);
+                }, function (item) {
+                    bpf_wf_tool.deleteArrayItem(userList, item);
+                });
+            });
+
+            $("#chkEnableRefresh").click(function () {
+                var isChecked = $("#chkEnableRefresh").attr("checked");
+                EnableRefresh = isChecked;
+                if (!isChecked) {
+                    $("#btnRefresh").hide();
+                }
+                else {
+                    $("#btnRefresh").show();
+                }
+            });
+
+            //getProcess();
+            createProcess();
+        })
+        function ExecuteCheck(operatorType) {
+            alert(operatorType);
+            return true;
+        }
+        function getCurrentUser() {
+            var userLoginID = $("#txtUser").val();
+            var currentUser = null;
+            if (userLoginID != "") {
+                currentUser = { UserLoginID: userLoginID };
+            }
+            else {
+                currentUser = { UserCode: '$VirtualUserCode$虚拟汇总人' };
+            }
+            return currentUser;
+        }
+        function refreshProcess() {
+            bpf_wf_client.refreshProcess({
+                FormParams: getFormParamList(),
+                BusinessID: $("#txtBusinessID").val(),
+                DynamicRoleUserList: getDynamicRoleUserList(),
+                CurrentUser: getCurrentUser(),
+                FlowCode: $("#txtFlowCode").val()
+            });
+        }
+        function getProcess() {
+            var businessID = $("#txtBusinessID").val();
+            bpf_wf_client.getProcess({
+                BusinessID: businessID,
+                CurrentUser: getCurrentUser()
+            }, function () {
+                $("#txtFlowCode").val(bpf_wf_data.WorkFlowContext.ProcessInstance.FlowCode);
+            });
+        }
+        function createProcess() {
+            var businessID = $("#txtBusinessID").val();
+            bpf_wf_client.createProcess({
+                FlowCode: $("#txtFlowCode").val(),
+                //ProcessTitle: $("#txtProcessTitle").val(),
+                //ProcessURL: "123.aspx?A=1&B=2",
+                //ProcessMobileURL: "123.aspx?BusinessID=23&A=1",
+                FormParams: getFormParamList(),
+                CurrentUser: getCurrentUser(),
+                DynamicRoleUserList: getDynamicRoleUserList()
+            });
+        }
+        function getFormParamList() {
+            $.each(Params, function (i, item) {
+                var txtObj = $("#txtParam_" + i);
+                var value = txtObj.val();
+                var type = txtObj.data("type");
+                Params[i] = getParamValue(value, type)
+            });
+            return Params;
+        }
+        function getParamValue(value, type) {
+            var result;
+            if (type == "1") {
+                result = value;
+            }
+            else if (type == "2") {
+                result = bpf_wf_tool.convertToBool(value);
+            }
+            else if (type == "3") {
+                result = bpf_wf_tool.convertToInt(value);
+            }
+            else if (type == "4") {
+                result = bpf_wf_tool.convertToDate(value);
+            }
+            else {
+                result = value;
+            }
+            return result;
+        }
+        function getDynamicRoleUserList() {
+            return DynamicRole;
+        }
+
+        //开始处理准备FormParam
+        function BeforeAction(args) {
+            if (EnableRefresh) {
+                args.BizContext.ExtensionCommond.RefreshProcess = "True";
+            }
+            else {
+                args.BizContext.ExtensionCommond.RefreshProcess = "False";
+            }
+
+            args.BizContext.BusinessID = $("#txtBusinessID").val();
+            args.BizContext.FormParams = getFormParamList();
+            args.BizContext.DynamicRoleUserList = getDynamicRoleUserList();
+        }
+        //流程处理完成，根据StatusCode判断是否需要回滚。
+        function AfterAction(args) {
+            bpf_wf_tool.tips("AfterAction");
+        }
+        //业务系统保存数据
+        function SaveApplicationData(args) {
+            bpf_wf_tool.tips("SaveApplicationData");
+            return true;
+        }
+        function getProcessDesignInfo() {
+            Params = {};
+            var flowCode = $("#txtFlowCode").val();
+            $.ajax({
+                type: "POST",
+                url: "Handler.ashx?t=" + new Date().getMilliseconds(),
+                dataType: "json",
+                async: true,
+                data: { FlowCode: flowCode },
+                beforeSend: function () {
+                    bpf_wf_tool.showLoading();
+                },
+                success: function (dataTemp) {
+                    bpf_wf_tool.hideLoading();
+                    //try {
+                    setParamAndDynamicRole(dataTemp);
+                    //}
+                    //catch (ee) {
+                    //    bpf_wf_tool.alert(ee.name + ": " + ee.message);
+                    //}
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    bpf_wf_tool.alert(errorThrown);
+                    bpf_wf_tool.hideLoading();
+                    throw (errorThrown);
+                }
+            });
+        }
+
+        function setParamAndDynamicRole(data) {
+            $.each(data.ParamDefine, function (i, item) {
+                Params[item.ParamName] = "";
+            });
+            $.each(data.DynamicRole, function (i, item) {
+                DynamicRole[item.RoleCode] = [];
+            });
+
+            // data.DynamicRole   data.ParamDefine
+            $("#tBodyParamDefine").empty();
+            $("#tBodyDynamicRole").empty();
+
+            $("#tmpl_ParamDefine").tmpl(data.ParamDefine).appendTo("#tBodyParamDefine");
+            $("#tmpl_DynamicRole").tmpl(data.DynamicRole).appendTo("#tBodyDynamicRole");
+
+            $(".aRoleUserSelect").each(function (i, item) {
+                var aDom = $(item);
+                var roleCode = aDom.data("rolecode");
+                var spDom = $("#spRoleUser_" + roleCode);
+                var dynamicRole = DynamicRole[roleCode];
+                //obj, func, appcode, allowMulti, allowAll, waitUser, checkedUser, exceptArray
+                aDom.click(function () {
+                    bpf_userselect_client.selectUser({
+                        func: function (data) {
+                            bpf_wf_tool.appendUserListToDom(spDom, data, true, function (item) {
+                                dynamicRole.push(item);
+                            },
+                         function (item) {
+                             bpf_wf_tool.deleteArrayItem(dynamicRole, item);
+                         });
+                        }
+                    });
+                })
+            });
+        }
+
+        function GetProcessSimilationAction() {
+            bpf_wf_maintenancetool.ajaxMaintenanace("GetProcessSimilationAction", { Param: $("#txtBusinessID").val(), BizAppCode: "YY_WWF-UNITTEST" }, function (data) {
+                console.log(data);
+            })
+        }
+
+    </script>
+    <style>
+        [v-cloak] { display: none; }
+
+        .tabCondition tr { height: 28px; }
+    </style>
+</head>
+<body>
+
+    <input id="processInfo" type="hidden" />
+    <span id="spResult"></span>
+    <input type="button" value="返回主页" onclick="location.href = 'indexnew.html'" /><br />
+    BusinessID:<input type="text" id="txtBusinessID" value="599"><br />
+    CurrentUser(UserLoginID):<input type="text" id="txtUser" value="zhengguilong" /><br />
+    ProcessTitle:<input type="text" id="txtProcessTitle" value="测试流程" /><br />
+    FlowCode:<input type="text" id="txtFlowCode" value="YY_SJSJ-Base" /><br />
+    是否启用刷新：<input type="checkbox" value="1" id="chkEnableRefresh" /><br />
+    流程变量：
+    <table class="tab_01" id="tabCondition">
+        <tr>
+            <th>变量名称</th>
+            <th>变量值</th>
+            <th style="text-align: left">变量类型</th>
+            <th style="text-align: left">变量说明</th>
+        </tr>
+        <tbody id="tBodyParamDefine"></tbody>
+    </table>
+    <br />
+
+    <script type="text/html" id="tmpl_ParamDefine">
+        <tr class="paramdefine">
+            <td>${ParamName}</td>
+            <td>
+                <input type="text" style="width:30px;" id="txtParam_${ParamName}" data-type="${ParamDataType}" />
+            </td>
+            <td>${ParamDataTypeName}</td>
+            <td>${Remark}</td>
+        </tr>
+    </script>
+
+    动态角色:
+    <table class="tab_01" id="tabDynamicRole">
+        <tr>
+            <th>动态角色Key</th>
+            <th style="text-align: left">动态角色描述</th>
+            <th style="text-align: left">动态角色人员</th>
+            <th style="text-align: left">操作</th>
+        </tr>
+        <tbody id="tBodyDynamicRole"></tbody>
+    </table>
+    <br />
+
+    <script type="text/html" id="tmpl_DynamicRole">
+        <tr class="dynamicrole">
+            <td>${RoleCode}</td>
+            <td>${Description}</td>
+            <td><span id="spRoleUser_${RoleCode}"></span></td>
+            <td><a class="aRoleUserSelect" id="aRoleUser_${RoleCode}" data-rolecode="${RoleCode}">请选择</a></td>
+        </tr>
+    </script>
+
+    <input type="button" onclick="getProcess() " value="显示流程" />
+    <input type="button" onclick="createProcess() " value="创建流程" />
+    <input type="button" onclick="refreshProcess() " id="btnRefresh" value="刷新流程" style="display: none" />
+    <input type="button" onclick="getProcessDesignInfo() " value="获取流程变量和动态角色" />
+
+    <div id="processMobile">
+    </div>
+
+    <!-- loading -->
+    <div style="display: none;">
+        <!-- class='loading' -->
+        <div class="ajax_loader"></div>
+    </div>
+
+    <!-- tips -->
+    <div class="tips_container" style="display: none;">
+        <div class="tips_inner">
+            <div>
+                <h2>提示</h2>
+                <span class="close" v-on:click="hideTipsModal()"></span>
+                <p>当前错误提示！</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            //bpf_userselect_tool.tips("TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest");
+        }
+
+    </script>
+
+</body>
+</html>

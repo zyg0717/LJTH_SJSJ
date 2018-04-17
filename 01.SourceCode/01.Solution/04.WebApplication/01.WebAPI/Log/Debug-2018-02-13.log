@@ -1,0 +1,16 @@
+[2018-02-13 09:42:18.7500]
+请求地址：/WebAPI/api/tasks/query,提交参数：{"TaskTitle":null,"TaskCreatorLoginName":null,"IsOnlySelf":true,"TimeRange":"","TaskType":1,"TaskStatus":"","PageIndex":1,"PageSize":10}
+[2018-02-13 10:45:58.0504]
+请求地址：/WebAPI/api/tasks/query,提交参数：{"TaskTitle":null,"TaskCreatorLoginName":null,"IsOnlySelf":true,"TimeRange":"","TaskType":1,"TaskStatus":"","PageIndex":1,"PageSize":10}
+[2018-02-13 10:47:25.9208]
+请求地址：/WebAPI/api/usernodes/query,提交参数：{"LoginOrName":"","Status":"0","TaskID":"92aa89ed-3388-4cf3-8f25-70fb5f71c257"}
+[2018-02-13 10:47:25.9263]
+请求地址：/WebAPI/api/tasks/load/92aa89ed-3388-4cf3-8f25-70fb5f71c257,提交参数：
+[2018-02-13 10:47:47.8230]
+请求地址：/WebAPI/api/tasks/summary/92aa89ed-3388-4cf3-8f25-70fb5f71c257/0/1/1/0,提交参数：
+[2018-02-13 10:48:03.6643]
+请求地址：/WebAPI/api/tasks/summary/92aa89ed-3388-4cf3-8f25-70fb5f71c257/0/1/1/0,提交参数：
+[2018-02-13 10:48:10.5102]
+请求地址：/WebAPI/api/tasks/summary/92aa89ed-3388-4cf3-8f25-70fb5f71c257/0/1/1/0,提交参数：
+[2018-02-13 10:48:51.2786]
+请求地址：/WebAPI/api/tasks/summary/92aa89ed-3388-4cf3-8f25-70fb5f71c257/0/1/1/0,提交参数：

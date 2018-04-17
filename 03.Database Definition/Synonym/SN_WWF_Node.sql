@@ -1,0 +1,7 @@
+
+IF OBJECT_ID('dbo.SN_WWF_Node') IS NOT NULL
+    DROP SYNONYM SN_WWF_Node;
+GO
+
+CREATE SYNONYM SN_WWF_Node FOR wf_sjsj.dbo.WWF_Node;
+GO

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<database>
+  <datamodels>
+    <datamodel name="JerryShi.OguPermission.User" tablename="USER" >
+      <property name="ID" fieldname="ID" type="System.String" sort="1" inputmapping="true" outputmapping="true" primary="true" defaultvalue="NEWID()" />
+      <property name="CodeName" fieldname="CODE_NAME" type="System.String" sort="2" inputmapping="true" outputmapping="true" primary="true" />
+      <property name="DisplayName" fieldname="DISPLAY_NAME" type="System.String" sort="3" inputmapping="true" outputmapping="true" />
+      <property name="Birthday" fieldname="BIRTHDAY" type="System.DateTime" sort="4" inputmapping="true" outputmapping="true" />
+      <property name="CreateTime" fieldname="CREATE_TIME" type="System.DateTime" sort="5" inputmapping="true" outputmapping="true" defaultvalue="GETDATE()" />
+      <foreignmodels>
+        <datamodel name="OUUser" foreignname="UserID" foreignfieldname="USER_ID"></datamodel>
+      </foreignmodels>
+    </datamodel>
+    <datamodel name="OUUser" tablename="OU_USER" type="" >
+      <property name="UserID"  fieldname="USER_ID" type="System.String" innersort="1" inputmapping="true" outputmapping="true" primary="true" />
+      <property name="ParentID" fieldname="PARENT_ID" type="System.String" innersort="2" inputmapping="true" outputmapping="true" primary="true" />
+      <property name="CodeName" fieldname="CODE_NAME" type="System.String" innersort="2" inputmapping="true" outputmapping="true" />
+      <property name="DisplayName" fieldname="DISPLAY_NAME" type="System.String" innersort="2" inputmapping="true" outputmapping="true" />
+      <property name="GlobalSort" fieldname="GLOBAL_SORT" type="System.String" innersort="2" inputmapping="true" outputmapping="true" />
+      <property name="OriginalSort" fieldname="ORIGINAL_SORT" type="System.String" innersort="2" inputmapping="true" outputmapping="true" />
+      <property name="InnerSort" fieldname="INNER_SORT" type="System.String" innersort="2" inputmapping="true" outputmapping="true" />
+      <property name="Status" fieldname="STATUS" type="System.String" innersort="2" inputmapping="true" outputmapping="true" />
+      <property name="ModifyTime" fieldname="MODIFY_TIME" type="System.DateTime" innersort="2" inputmapping="true" outputmapping="true" />
+      <property name="CreateTime" fieldname="CREATE_TIME" type="System.DateTime" innersort="3" inputmapping="false" outputmapping="true" />
+      <foreignmodels>
+        <foreignmodel  name="User" foreignname="ID" foreignfieldname="ID"  innersort="1" />         
+      </foreignmodels>
+    </datamodel>
+    <datamodel name="UserView" tablename="User" >
+      <property name="ID" fieldname="ID" type="System.String" sort="1" inputmapping="true" outputmapping="true" />
+      <property name="CodeName" fieldname="CODE_NAME" type="System.String" sort="1" inputmapping="true" outputmapping="true" />
+      <property name="DisplayName" fieldname="DISPLAY_NAME" type="System.String" sort="1" inputmapping="true" outputmapping="true" />
+      <property name="Birthday" fieldname="BIRTHDAY" type="System.DateTime" sort="1" inputmapping="true" outputmapping="true" />
+      <property name="CreateTime" fieldname="CREATE_TIME" type="System.DateTime" sort="1" inputmapping="true" outputmapping="true" />
+      <foreignmodels>
+        <datamodel name="OUUser" foreignname="UserID" foreignfieldname="USER_ID"></datamodel>
+      </foreignmodels>
+    </datamodel>
+    <datamodel name="model1" tablename="dictTable">
+      <property name="ID" fieldname="ID" type="System.String" sort="1" inputmapping="true" outputmapping="true" />
+    </datamodel>
+  </datamodels>
+  <datamodels configpath="$appconfigpath\other.xml" />
+</database>

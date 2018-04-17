@@ -1,0 +1,11 @@
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\bin\Debug\Plugin.Auth.dll
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\bin\Debug\Plugin.Auth.pdb
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\bin\Debug\Framework.Web.dll
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\bin\Debug\Framework.Core.dll
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\bin\Debug\Framework.Web.pdb
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\bin\Debug\Framework.Core.pdb
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\obj\Debug\08.Auth.csprojResolveAssemblyReference.cache
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\obj\Debug\08.Auth.csproj.CoreCompileInputs.cache
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\obj\Debug\08.Auth.csproj.CopyComplete
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\obj\Debug\Plugin.Auth.dll
+H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\08.Auth\obj\Debug\Plugin.Auth.pdb

@@ -1,0 +1,116 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/SiteMaster/Layout.Master" AutoEventWireup="true" CodeBehind="PageLayout.master.cs" Inherits="WebApplication.WebPortal.SiteMaster.PageLayout" %>
+
+<asp:Content ContentPlaceHolderID="styles" runat="server">
+    <link href="<%=ResolveUrl("~/Assets/styles/page.css") %>" rel="stylesheet" />
+    <script type="text/javascript" src="<%=ResolveUrl("~/Assets/scripts/cycle.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Assets/scripts/raphael.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Assets/scripts/jquery.pagination.js") %>"></script>
+    <asp:ContentPlaceHolder ID="page_styles" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="contents" runat="server">
+    <div class="page-sidebar col-lg-3 col-md-3 col-sm-3 hidden-xs">
+        <div class="widget bs-docs-sidebar affix" >
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption arrow-l">开启数据收集之旅</span>
+            </div>
+            <div class="widget-body no-padding">
+                <div class="widget-main ">
+                    <div class="panel-group accordion" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading ">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#create-template">
+                                        <span class="badge grade-green graded">1</span> 新增模板
+                                        <span class="arrow-down"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="create-template" class="panel-collapse collapse in">
+                                <div class="panel-body border-red">
+                                    <p>发起任务前，需要先创建一个模板。</p><a class="btn btn-success btn-xs white new-model" href="/Application/Models/TemplateModel.aspx"><span><i class="fa fa-plus"></i>&nbsp;新增模板</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#create-task">
+                                        <span class="badge grade-blue graded">2</span> 新增任务
+                                        <span class="arrow-down"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="create-task" class="panel-collapse collapse" style="height: 0px;">
+                                <div class="panel-body border-palegreen">
+                                    <p>有了模板，我们可以使用模板创建一个任务。</p><a class="btn btn-info btn-xs white new-task" href="/Application/Task/TaskAdd.aspx"><span><i class="fa fa-plus"></i>&nbsp;新增任务</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#assign-task">
+                                        <span class="badge graded">3</span> 下发任务
+                                        <span class="arrow-down"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="assign-task" class="panel-collapse collapse" style="height: 0px;">
+                                <div class="panel-body border-magenta">
+                                    <p>选择模板发起任务后接收人会收到待办。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#fill-task">
+                                        <span class="badge graded">4</span> 等待填报
+                                        <span class="arrow-down"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="fill-task" class="panel-collapse collapse" style="height: 0px;">
+                                <div class="panel-body border-magenta">
+                                    <p>接收人下载模板，填报数据，再上传到系统中。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#download-task">
+                                        <span class="badge graded">5</span> 下载汇总文件
+                                        <span class="arrow-down"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="download-task" class="panel-collapse collapse" style="height: 0px;">
+                                <div class="panel-body border-magenta">
+                                    <p>下发人可以随时下载汇总的文件。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget-footer bordered-top bordered-blue">
+                <div class="widget-buttons">
+                    <span class="widget-caption"><a href="<%=ResolveUrl("~/Application/Navigation/QuickStart.aspx") %>">开始学习</a></span>
+                </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="page_sidebar" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="page-content col-lg-9 col-md-9 col-sm-9 col-xs-9">
+        <asp:ContentPlaceHolder ID="page_contents" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="scripts" runat="server">
+    <asp:ContentPlaceHolder ID="page_scripts" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
