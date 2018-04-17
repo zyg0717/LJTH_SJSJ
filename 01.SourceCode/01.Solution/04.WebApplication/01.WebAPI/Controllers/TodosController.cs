@@ -178,7 +178,7 @@ namespace WebApplication.WebAPI.Controllers
             var finder = VTaskTodoOperator.Instance.GetViewList(queryFilter).FirstOrDefault();
             if (finder == null)
             {
-                throw new BizException("待办无效");
+                throw new BizException("该流程已作废");
             }
             //if (finder.EmployeeLoginName == WebHelper.GetCurrentUser().LoginName)
             //{

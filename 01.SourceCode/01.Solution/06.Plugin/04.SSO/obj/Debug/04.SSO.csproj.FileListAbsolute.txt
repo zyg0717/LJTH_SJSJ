@@ -7,3 +7,12 @@ H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\04.SSO\ob
 H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\04.SSO\obj\Debug\04.SSO.csproj.CopyComplete
 H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\04.SSO\obj\Debug\Plugin.SSO.dll
 H:\work\LJTH\sjsj\code\LJTH\RCSJSJ\01.SourceCode\01.Solution\06.Plugin\04.SSO\obj\Debug\Plugin.SSO.pdb
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\04.SSO\bin\Debug\Plugin.SSO.dll
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\04.SSO\bin\Debug\Plugin.SSO.pdb
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\04.SSO\bin\Debug\NLog.dll
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\04.SSO\bin\Debug\NLog.xml
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\04.SSO\obj\Debug\04.SSO.csprojResolveAssemblyReference.cache
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\04.SSO\obj\Debug\04.SSO.csproj.CoreCompileInputs.cache
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\04.SSO\obj\Debug\04.SSO.csproj.CopyComplete
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\04.SSO\obj\Debug\Plugin.SSO.dll
+H:\work\LJTH\sjsj\code\LJTH_SJSJ\01.SourceCode\01.Solution\06.Plugin\04.SSO\obj\Debug\Plugin.SSO.pdb
