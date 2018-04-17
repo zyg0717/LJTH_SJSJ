@@ -277,6 +277,7 @@ function BuildPage(data) {
                 if (!self.cellformulaFilter(self.$data, "require")) {
                     return false;
                 }
+                self.columnNameFilter("submit", true);
                 var action = self.Edit ? "update" : "save";
                 var url = '';
                 self.AttachmentId = (self.AttachmentId == null || self.AttachmentId.length == 0) ? "" : self.AttachmentId;
@@ -352,13 +353,13 @@ function BuildPage(data) {
                                     if (bol) {
                                         val.required = true;
                                     } else {
-                                        val.required = false;
-                                        one.startSort = -1;
-                                        one.endSort = -1;
+                                        val.required = false;         
                                     }
                                 }
                                 if (one.columns.length - 1 == j) {
                                     if (!bol) {
+                                        one.startSort = -1;
+                                        one.endSort = -1;
                                         utils.alertMessage("取消必填成功", function () { })
                                     }
                                 }

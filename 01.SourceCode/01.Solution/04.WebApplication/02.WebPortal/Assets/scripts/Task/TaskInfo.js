@@ -14,6 +14,7 @@
         tabName: 'total',
         taskFileDialog: taskFileDialog,
         isMobile: utils.mobileBrower(),
+        isUpdata: false,
         OwnerTaskID: '',
         ApproveContent: '',
         Remark: '',
@@ -36,6 +37,13 @@
         mounted: function () {
             var self = this;
             console.log(self)
+            if (!self.isMobile) {
+                if (self.GetQueryString("taskId")) {
+                    if (self.GetQueryString("TaskTemplateType") == "2") {
+                        self.isUpdata = true;
+                    }
+                }
+            }
             setTimeout(function () {
                 $("#appenduseruploader").ImportUser({
                     businessid: self.taskId,
@@ -139,7 +147,7 @@
                     , self.taskFileDialog.content.data.chk2 ? 1 : 0
                     , self.taskFileDialog.content.data.chk3 ? 1 : 0
                     , self.taskFileDialog.content.data.chk4 ? 1 : 0
-                    );
+                );
             },
             preview: function () {
                 var self = this;
@@ -363,6 +371,11 @@
                     }, error: function (status, statusText, msg) {
                     }
                 });
+            },
+            GetQueryString: function (name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return unescape(r[2]); return null;
             }
         }
     });

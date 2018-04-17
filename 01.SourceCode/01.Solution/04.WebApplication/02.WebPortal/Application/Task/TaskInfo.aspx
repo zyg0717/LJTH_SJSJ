@@ -75,9 +75,9 @@
                 </div>
                 <div class="task-behavior clear">
                     <div class="mgb col-md-6 col-sm-6 pd0 col-xs-12">
-                        <button v-on:click="SelectUser()" class="add-member choose-member btn btn-default btn-white pull-left">追加</button>
+                        <button v-on:click="SelectUser()" class="add-member choose-member btn btn-default btn-white pull-left" v-if="!isUpdata">追加</button>
                         <%--<button class="append-user btn btn-default btn-white pull-left">批量追加</button>--%>
-                        <div v-if="!isMobile" class="attachment-btn btn btn-default btn-white pull-left" title="请将填报人登陆账号每行一个写到excel文件中， 点击按钮选择文件并上传">
+                        <div v-if="!isMobile && !isUpdata" class="attachment-btn btn btn-default btn-white pull-left" title="请将填报人登陆账号每行一个写到excel文件中， 点击按钮选择文件并上传">
                             <span>批量追加</span><input type="file" name="file" id="appenduseruploader" />
                         </div>
                         <button v-if="userNodes.length > 0" class="resend-btn choose-member btn pull-left"  v-bind:class="{'btn-default': checkedLength > 0, 'btn-disabled': checkedLength == 0 }" v-on:click="resendTask(tabName,TaskID,receiverName)">重发</button>
